@@ -21,6 +21,12 @@ echo """{
               "Command": "shutdown now",
               "Default": true,
               "Type": "external"
+          },
+          {
+              "Operation": "sleep",
+              "Command": "suspend",
+              "Default": true,
+              "Type": "external"
           }
       ],
   "ExitIfAnyPortIsAlreadyUsed" : true,
