@@ -11,6 +11,25 @@ rm -r windows_*
 rm -r linux_*
 rm SleepOnLAN-1.1.1-RELEASE.zip
 chmod +x /bin/sol
+
+echo """{
+  "Listeners" : ["UDP:9", "UDP:7", "HTTP:8009" ],
+  "LogLevel" : "INFO",
+  "Commands": [
+          {
+              "Operation": "shutdown",
+              "Command": "shutdown now",
+              "Default": true,
+              "Type": "external"
+          }
+      ],
+  "ExitIfAnyPortIsAlreadyUsed" : true,
+  "AvoidDualUDPSending" : {
+          "Active": false,
+          "Delay": "100ms"
+  }
+}""" > /etc/sol/sol.json
+
 echo """[Unit]
 Description=Sleep-On-LAN daemon
 
