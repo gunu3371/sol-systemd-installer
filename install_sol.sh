@@ -24,7 +24,7 @@ echo """{
           },
           {
               "Operation": "sleep",
-              "Command": "suspend",
+              "Command": "systemctl suspend",
               "Default": true,
               "Type": "external"
           }
