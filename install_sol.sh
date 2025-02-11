@@ -16,8 +16,8 @@ Description=Sleep-On-LAN daemon
 
 [Service]
 User=root
-WorkingDirectory=/etc/sol
-ExecStart=/bin/sol
+WorkingDirectory=/etc/sol/
+ExecStart=/bin/sol --config /etc/sol/sol.json
 Restart=always
 
 [Install]
